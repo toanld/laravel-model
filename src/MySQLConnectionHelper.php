@@ -129,7 +129,7 @@ class MySQLConnectionHelper
             $log_path_pattern = storage_path(static::LOG_PATH_CONNECT_FAIL_PATTERN);
             $host = $connection['host'] ?? $connection['read']['host'] ?? '';
             static::appendToLogFile(sprintf($log_path_pattern, $host), ' ');
-            $content = date('H:i:s d/m/Y') . ': Connection fail from ' . $_SERVER['REMOTE_ADDR'] . PHP_EOL;
+            $content = date('H:i:s d/m/Y') . ': Connection fail from ' . @$_SERVER['REMOTE_ADDR'] . PHP_EOL;
             static::appendToLogFile(sprintf($log_path_pattern, $host . '_detail'), $content);
         }
     }
