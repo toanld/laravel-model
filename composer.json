@@ -1,5 +1,5 @@
 {
-  "name": "vatgia/laravel-model",
+  "name": "toanld/laravel-model",
   "description": "Laravel model support multi connection format master - slaves. Connect random a slave with weight",
   "keywords": [
     "laravel",
